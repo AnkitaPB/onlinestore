@@ -1,6 +1,5 @@
 package com.att.onlinestore.service;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,7 +10,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -45,10 +43,6 @@ class ProductServiceImpl implements ProductService {
 		
 	}
 	
-	
-
-	
-	
 	private void fileUpload(MultipartFile file) {
 
 		 try {
@@ -64,16 +58,6 @@ class ProductServiceImpl implements ProductService {
 			}
 		
 	}
-
-
-
-
-
-	
-
-
-
-
 
 	@Override
 	public   List<Map<String, String>>   getProductList() {
@@ -112,7 +96,7 @@ class ProductServiceImpl implements ProductService {
 		 prd.put("description", p.getDescrption());
 		 prd.put("url", p.getImageUrl());
 		 plist.put(id,prd);
-		 
+		 logger.info("Edited plist:"+plist);
 		
 		
 	}
